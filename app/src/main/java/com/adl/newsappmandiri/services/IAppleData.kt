@@ -1,10 +1,7 @@
 package com.adl.newsappmandiri.services
 
 
-import com.adl.newsappmandiri.model.ResponseApplesNews
-import com.adl.newsappmandiri.model.ResponseBusinessNews
-import com.adl.newsappmandiri.model.ResponseTechNews
-import com.adl.newsappmandiri.model.ResponseTeslaNews
+import com.adl.newsappmandiri.model.*
 import retrofit2.http.GET
 
 interface IAppleData {
@@ -20,4 +17,7 @@ interface IAppleData {
 
     @GET("v2/top-headlines?sources=techcrunch&apiKey=61a586c66d044316a6648da79b2607db")
     fun getTechData(): retrofit2.Call<ResponseTechNews>
+
+    @GET("v2/everything?domains=wsj.com&apiKey=61a586c66d044316a6648da79b2607db")
+    fun getWsData(): retrofit2.Call<ResponseWallStreetNews>
 }

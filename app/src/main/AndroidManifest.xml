@@ -16,7 +16,7 @@
         android:theme="@style/Theme.NewsAppMandiri"
         tools:targetApi="31">
         <activity
-            android:name=".TechNewsActivity"
+            android:name=".WallStreetActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
             <intent-filter>
@@ -26,19 +26,23 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".TopBusinessActivity"
+            android:name=".TechNewsActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
 
         </activity>
         <activity
-            android:name=".TeslaNewsActivity"
+            android:name=".TopBusinessActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"></activity>
         <activity
+            android:name=".TeslaNewsActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
     </application>
 
 </manifest>

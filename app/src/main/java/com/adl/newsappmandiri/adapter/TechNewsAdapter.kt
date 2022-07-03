@@ -10,7 +10,7 @@ class TechNewsAdapter(val techData: ArrayList<ArticlesItemTech>): RecyclerView.A
     lateinit var parent: ViewGroup
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TechNewsVH {
         this.parent = parent
-        return TechNewsVH(LayoutInflater.from(parent.context).inflate(R.layout.news_item,parent,false))
+        return TechNewsVH(LayoutInflater.from(parent.context).inflate(R.layout.news_tech,parent,false))
     }
 
     override fun getItemCount(): Int {
