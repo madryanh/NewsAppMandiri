@@ -1,5 +1,6 @@
 package com.adl.newsappmandiri
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -9,6 +10,7 @@ import com.adl.newsappmandiri.adapter.BusinessNewsAdapter
 import com.adl.newsappmandiri.adapter.TeslaNewsAdapter
 import com.adl.newsappmandiri.model.*
 import com.adl.newsappmandiri.services.RetrofitConfig
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_tesla_news.*
 import kotlinx.android.synthetic.main.activity_top_business.*
 import retrofit2.Call
@@ -24,6 +26,11 @@ class TopBusinessActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_top_business)
         loadBusinessData()
+
+        btnBackBusiness.setOnClickListener({
+            val intent = Intent(this@TopBusinessActivity, CategoryActivity::class.java)
+            startActivity(intent)
+        })
     }
 
     fun loadBusinessData(){

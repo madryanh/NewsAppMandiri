@@ -1,5 +1,6 @@
 package com.adl.newsappmandiri
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -10,6 +11,7 @@ import com.adl.newsappmandiri.adapter.TechNewsAdapter
 import com.adl.newsappmandiri.adapter.WallStreetNewsAdapter
 import com.adl.newsappmandiri.model.*
 import com.adl.newsappmandiri.services.RetrofitConfig
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_tech_news.*
 import kotlinx.android.synthetic.main.activity_wall_street.*
 import retrofit2.Call
@@ -25,6 +27,11 @@ class WallStreetActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_wall_street)
         loadWsData()
+
+        btnBackWs.setOnClickListener({
+            val intent = Intent(this@WallStreetActivity, CategoryActivity::class.java)
+            startActivity(intent)
+        })
     }
 
     fun loadWsData(){

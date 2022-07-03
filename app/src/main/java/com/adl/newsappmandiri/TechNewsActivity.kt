@@ -1,5 +1,6 @@
 package com.adl.newsappmandiri
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -27,6 +28,11 @@ class TechNewsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tech_news)
         loadTechData()
+
+        btnBackTech.setOnClickListener({
+            val intent = Intent(this@TechNewsActivity, CategoryActivity::class.java)
+            startActivity(intent)
+        })
     }
     fun loadTechData(){
         RetrofitConfig().getService().getTechData().enqueue(object : Callback<ResponseTechNews> {

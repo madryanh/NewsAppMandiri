@@ -1,5 +1,6 @@
 package com.adl.newsappmandiri
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -23,6 +24,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         loadAppleData()
+
+        btnBackMain.setOnClickListener({
+            val intent = Intent(this@MainActivity, CategoryActivity::class.java)
+            startActivity(intent)
+        })
     }
 
     fun loadAppleData(){

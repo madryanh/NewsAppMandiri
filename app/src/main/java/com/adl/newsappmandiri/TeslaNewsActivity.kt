@@ -1,5 +1,6 @@
 package com.adl.newsappmandiri
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -24,6 +25,11 @@ class TeslaNewsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tesla_news)
         loadTeslaData()
+
+        btnBackTesla.setOnClickListener({
+            val intent = Intent(this@TeslaNewsActivity, CategoryActivity::class.java)
+            startActivity(intent)
+        })
     }
 
     fun loadTeslaData(){
