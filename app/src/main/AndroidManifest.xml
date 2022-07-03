@@ -16,6 +16,16 @@
         android:theme="@style/Theme.NewsAppMandiri"
         tools:targetApi="31">
         <activity
+            android:name=".CategoryActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".WebViewApple"
             android:exported="false" />
         <activity
@@ -46,11 +56,7 @@
             android:name=".TeslaNewsActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".MainActivity"
