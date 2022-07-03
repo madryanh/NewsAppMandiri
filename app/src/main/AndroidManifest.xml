@@ -16,7 +16,34 @@
         android:theme="@style/Theme.NewsAppMandiri"
         tools:targetApi="31">
         <activity
+            android:name=".WebViewApple"
+            android:exported="false" />
+        <activity
+            android:name=".WebViewBusiness"
+            android:exported="false" />
+        <activity
+            android:name=".WebViewTech"
+            android:exported="false" />
+        <activity
+            android:name=".WebViewTesla"
+            android:exported="false" />
+        <activity
+            android:name=".WebViewNewsActivity"
+            android:exported="false" />
+        <activity
             android:name=".WallStreetActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".TechNewsActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".TopBusinessActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".TeslaNewsActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
             <intent-filter>
@@ -25,20 +52,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".TechNewsActivity"
-            android:exported="true"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
-
-        </activity>
-        <activity
-            android:name=".TopBusinessActivity"
-            android:exported="true"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"></activity>
-        <activity
-            android:name=".TeslaNewsActivity"
-            android:exported="true"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
